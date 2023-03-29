@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-
-"""Define a Square class"""
+"""Define a class Square."""
 
 
 class Square:
-    """Blueprint for a square"""
+    """Represent a square."""
 
-    def __init__(self, size=0):
-        """Initialize a new square
-
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new square.
         Args:
-            size (int): The length of the new square
+            size (int): The size of the new square.
+            position (int, int): The position of the new square.
         """
-        self.__size = size
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """Get the size/length of the square"""
-        return self.__size
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -25,8 +25,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     @property
     def position(self):
@@ -43,11 +42,11 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Return the area of the square"""
-        return self.__size ** 2
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
 
     def my_print(self):
-        """Print the square represented with # sign"""
+        """Print the square with the # character."""
         if self.__size == 0:
             print("")
             return

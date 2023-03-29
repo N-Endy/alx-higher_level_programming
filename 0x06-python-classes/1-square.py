@@ -5,7 +5,7 @@
 
 class Square:
     """Blueprint for a square"""
-    
+
     def __init__(self, size):
         """Initialize a new square
 

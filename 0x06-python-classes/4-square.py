@@ -7,8 +7,12 @@ class Square:
     """Blueprint for a square"""
 
     def __init__(self, size=0):
-        """Initialize a new square"""
-            self.__size = size
+        """Initialize a new square
+
+        Args:
+            size (int): The length of the new square
+        """
+        self.__size = size
 
     @property
     def size(self):
